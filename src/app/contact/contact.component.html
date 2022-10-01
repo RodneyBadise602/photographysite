@@ -1,29 +1,29 @@
-<p>contact works!</p>
+<p>Contact Us</p>
 <div>  
-    <form (ngSubmit)="onSubmit()">
+    <form #contactInfo = "ngForm" (ngSubmit) = "onSubmit(contactInfo.value)" >
 
         <div>
             <label>Name : </label>
-            <input type="text" >
+            <input type="text" name = "name" ngModel>
         </div>
 
         <div>
             <label>Contact Number : </label>
-            <input type="text" >
+            <input type="text" name = "phoneNumber" ngModel>
         </div>   
 
          <div>
             <label>Email : </label>
-            <input type="email" >
+            <input type="email" name = "email" ngModel>
         </div>
 
         <div>
             <label>Message : </label>
-            <textarea rows="10" cols="70"></textarea>
+            <textarea rows="10" cols="70" name = "message" ngModel></textarea>
         </div>
         
         <div>
-            <button class="button" type="submit">Purchase</button>
+            <button class="button" type="submit">Send Message</button>
         </div>
 
       </form>
